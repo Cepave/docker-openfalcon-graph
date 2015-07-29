@@ -15,7 +15,7 @@ $sudo docker build --force-rm=true -t openfalcon-graph .
 Use default mysql account, configuration, and falcon-graph package.
 
 ```
-$sudo docker run -ti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
+$sudo docker run -dti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
 ```
 
 ### Advanced Run
@@ -32,5 +32,5 @@ $sudo docker run -ti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
   For example, **cfg.json** in /tmp/config and **falcon-graph.tar.gz** in /tmp/pack,
 
 ```
-$sudo docker run -ti --name graph -v /tmp/pack:/package -v /tmp/config:/config -p 6070:6070 -p 6071:6071 openfalcon-graph
+$sudo docker run -dti --name graph -v /tmp/pack:/package -v /tmp/config:/config -p 6070:6070 -p 6071:6071 openfalcon-graph
 ```
