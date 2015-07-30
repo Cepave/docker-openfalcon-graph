@@ -22,12 +22,12 @@ $sudo docker run -dti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
 
 + Self-defined mysql account and configuration
 
-  Replace file **cfg.json** within the volume */config*.  
+  Replace file **cfg.json** in the volume */config*.  
   For more detail about **cfg.json**, see [Graph](http://book.open-falcon.com/zh/install/graph.html).
 
 + New falcon-graph package
 
-  Replace file **falcon-graph.tar.gz** within the volume */package*.
+  Replace file **falcon-graph.tar.gz** in the volume */package*.
   
   For example, **cfg.json** in /tmp/config and **falcon-graph.tar.gz** in /tmp/pack,
 
