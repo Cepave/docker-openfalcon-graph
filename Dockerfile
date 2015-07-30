@@ -15,5 +15,8 @@ WORKDIR /root
 COPY run.sh ./
 RUN chmod +x run.sh
 
+#Port
+EXPOSE 6070 6071
+
 # Start
 CMD ["./run.sh"]
