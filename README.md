@@ -5,7 +5,7 @@
 Enter the following command in the repo directory.
 
 ```
-$sudo docker build --force-rm=true -t openfalcon-graph .
+$ docker build -t openfalcon-graph -f docker/ubuntu/Dockerfile .
 ```
 
 ## Run
@@ -15,7 +15,7 @@ $sudo docker build --force-rm=true -t openfalcon-graph .
 Use default mysql account, configuration, and falcon-graph package.
 
 ```
-$sudo docker run -dti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
+$ docker run -d --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
 ```
 
 ### Advanced Run
@@ -25,12 +25,8 @@ $sudo docker run -dti --name graph -p 6070:6070 -p 6071:6071 openfalcon-graph
     Replace file **cfg.json** in the volume */config*.  
     For more detail about **cfg.json**, see [Graph](http://book.open-falcon.com/zh/install/graph.html).
 
-+ New falcon-graph package
-
-    Replace file **falcon-graph.tar.gz** in the volume */package*.
-  
-For example, **cfg.json** in /tmp/config and **falcon-graph.tar.gz** in /tmp/pack,
+For example, **cfg.json** in /tmp/config,
 
 ```
-$sudo docker run -dti --name graph -v /tmp/pack:/package -v /tmp/config/cfg.json:/config/cfg.json -p 6070:6070 -p 6071:6071 openfalcon-graph
+$ docker run -d --name graph -v /tmp/config/cfg.json:/config/cfg.json -p 6070:6070 -p 6071:6071 openfalcon-graph
 ```
